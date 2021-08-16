@@ -1,0 +1,80 @@
+.mainDiv {
+	display: table;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	/* 	background-image: url("images/astro.jpg"); */
+	/* 	background-position: center; */
+	/* 	background-repeat: no-repeat; */
+	/* 	background-size: cover; */
+}
+
+.loginLayout {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.login-form {
+	border: 1px solid;
+	padding: 50px;
+	max-width: 340px;
+	margin: auto;
+	border-radius: 50px;
+	background: #c8c8c8;
+	height: 420px;
+}
+
+.change-password-form {
+	border: 1px solid;
+	padding: 50px;
+	max-width: 340px;
+	margin: auto;
+	border-radius: 50px;
+	background: #c8c8c8;
+	height: 400px;
+}
+
+
+.password-lost-form {
+	border: 1px solid;
+	padding: 30px;
+	max-width: 330px;
+	margin: auto;
+	border-radius: 20px;
+	background: #c8c8c8;
+	height: 250px;
+}
+
+.signup-form{
+	border: 1px solid;
+	padding: 45px;
+	max-width: 375px;
+	margin: auto;
+	border-radius: 50px;
+	background: #c8c8c8;
+	height: 670px;
+}
+
+.registered-form{
+	border: 1px solid;
+	padding: 45px;
+	max-width: 375px;
+	margin: auto;
+	border-radius: 50px;
+	background: #c8c8c8;
+	height: 500px;
+}
+
+.login-form-forgot {
+	float: right;
+}
+
+.login-form-button {
+	width: 100%;
+}
+
+.sign-up-button {
+	width: 50%;
+}

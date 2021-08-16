@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2019-07-17T11:55:58 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="manager_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0d048b96-458c-42e6-a0d2-9072e3098475">
+	<style name="Style1" forecolor="#0077B3" fontName="Times New Roman" isBold="true"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="testSummaryDataset" uuid="83774a7e-6547-4c57-9761-b48f179ce6af">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="newCount" class="java.lang.Long"/>
+		<field name="inprogressCount" class="java.lang.Long"/>
+		<field name="completedCount" class="java.lang.Long"/>
+		<field name="expiredCount" class="java.lang.Long"/>
+		<field name="rejectedCount" class="java.lang.Long"/>
+	</subDataset>
+	<parameter name="testSummaryDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<field name="questionBankName" class="java.lang.String"/>
+	<field name="questionsCount" class="java.lang.Long"/>
+	<field name="totalCandidate" class="java.lang.Long"/>
+	<field name="newLabel" class="java.lang.String"/>
+	<field name="inprogressLabel" class="java.lang.String"/>
+	<field name="completedLabel" class="java.lang.String"/>
+	<field name="expiredLabel" class="java.lang.String"/>
+	<field name="newCount" class="java.lang.Long"/>
+	<field name="inprogressCount" class="java.lang.Long"/>
+	<field name="completedCount" class="java.lang.Long"/>
+	<field name="expiredCount" class="java.lang.Long"/>
+	<field name="rejectedCount" class="java.lang.Long"/>
+	<field name="rejectedLabel" class="java.lang.String"/>
+	<field name="category" class="java.lang.String"/>
+	<field name="subcategory" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<image>
+				<reportElement x="200" y="0" width="130" height="38" uuid="42ddc877-3d39-47a2-928d-0989f3a9660d">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[this.getClass().getResourceAsStream("/static/icon/logotrans.png")]]></imageExpression>
+			</image>
+			<line>
+				<reportElement style="Style1" x="0" y="80" width="541" height="1" uuid="a733d5b7-3fe7-4a76-a2b1-676a2abbaa38">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Style1" mode="Transparent" x="50" y="40" width="440" height="32" forecolor="#003399" uuid="c11c57ed-0397-4987-b9db-b3deb3dd2d67">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="18" isBold="true" isItalic="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[ONLINE ASSESSMENT TEST SUMMARY
+]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-50" width="595" height="30" forecolor="#FFFFFF" backcolor="#033660" uuid="64520441-22f8-456d-8653-68e3cc6c47e8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="227" splitType="Stretch">
+			<pieChart>
+				<chart isShowLegend="true" evaluationTime="Report" customizerClass="org.web.vexamine.utils.CustomizeTestPieChart">
+					<reportElement x="10" y="10" width="450" height="200" uuid="f25836b4-aaef-40f4-8b18-e120fc30d482"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend position="Right"/>
+				</chart>
+				<pieDataset>
+					<pieSeries>
+						<keyExpression><![CDATA[$F{newLabel}]]></keyExpression>
+						<valueExpression><![CDATA[$F{newCount}]]></valueExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA[$F{inprogressLabel}]]></keyExpression>
+						<valueExpression><![CDATA[$F{inprogressCount}]]></valueExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA[$F{completedLabel}]]></keyExpression>
+						<valueExpression><![CDATA[$F{completedCount}]]></valueExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA[$F{expiredLabel}]]></keyExpression>
+						<valueExpression><![CDATA[$F{expiredCount}]]></valueExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA[$F{rejectedLabel}]]></keyExpression>
+						<valueExpression><![CDATA[$F{rejectedCount}]]></valueExpression>
+					</pieSeries>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="282" splitType="Stretch">
+			<staticText>
+				<reportElement style="Style1" x="10" y="79" width="208" height="32" uuid="587fe0fd-5998-44a5-87e4-5bc4f5c3d966">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Question Bank]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Style1" x="230" y="79" width="8" height="30" uuid="383d4899-1faa-4860-9637-52251fda5b06">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Style1" x="260" y="79" width="220" height="30" uuid="c50264e4-908c-46b9-a0bf-05085dae388d">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{questionBankName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Style1" x="10" y="119" width="208" height="32" uuid="cee31dbd-f7e2-4aab-86ec-a995efcc3062">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Style1" x="230" y="119" width="8" height="30" uuid="2987270b-f027-43ee-8e95-5315c3f1a8b2">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Style1" x="230" y="159" width="8" height="30" uuid="57a31f02-ffce-4e7d-b6c6-7aaa740ec1d7">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Style1" x="10" y="158" width="208" height="32" uuid="4986e97a-9e5d-4bc4-8be6-2a0e59ac3a5c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[SubCategory]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Style1" x="10" y="199" width="208" height="32" uuid="1cf0c5f2-cc4b-47d9-b97c-bdaeb8585b47">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total Questions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Style1" x="230" y="200" width="8" height="30" uuid="e0b5cc25-d57f-4192-b2df-780aca56a025">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Style1" x="260" y="200" width="220" height="30" uuid="b78e40d1-d97d-4e61-a969-cedee346be37"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{questionsCount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Style1" x="10" y="239" width="208" height="32" uuid="e04b7e4d-9ee9-400b-9b6f-1678b0d2adb2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total Candidate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Style1" x="230" y="240" width="8" height="30" uuid="7f538ac3-aa70-4faf-8585-c8806b4780e9">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Style1" x="260" y="240" width="220" height="30" uuid="5b980f24-3075-4488-8e98-844dc417c40d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalCandidate}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="10" y="9" width="540" height="61" uuid="5d9bd63c-3961-4e60-a933-af5da9fcb5f2">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="Blank">
+					<datasetRun subDataset="testSummaryDataset" uuid="89fe039b-22e5-4e52-960b-1c7fc6e68cd6">
+						<dataSourceExpression><![CDATA[$P{testSummaryDataSource}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="108" uuid="e0b59784-1685-4c3d-b15d-0b1fa32c2c3a">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement x="0" y="0" width="108" height="30" uuid="4fbdf720-1b0b-4d53-9fe5-d22988f16f05"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[New]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="108" height="30" uuid="2227cf4d-fe20-4001-9bfe-1e985f3fcbad"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{newCount}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="108" uuid="066ffee4-d556-42a1-844f-55a2d2bc3540">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement x="0" y="0" width="108" height="30" uuid="81f8a76d-a165-4a2e-bafb-977cdb1d7cbe"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Inprogress]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="108" height="30" uuid="6e53d983-8812-4d31-a835-f00c6dff0414"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{inprogressCount}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="108" uuid="4c252e2a-bc00-4d19-9733-22b53373b2ad">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement x="0" y="0" width="108" height="30" uuid="b5ac616f-f581-44f8-ad72-b072e99156f2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Completed]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="108" height="30" uuid="c5efb64b-ca8c-4c24-a704-531f090667c0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{completedCount}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="108" uuid="f475d002-6769-44c0-afed-bea565204647">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement x="0" y="0" width="108" height="30" uuid="221cfce5-23dc-438d-9fe6-12e2d5e54061"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Expired]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="108" height="30" uuid="01f23ee1-664f-4afd-bac4-934858bf2b43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{expiredCount}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="108" uuid="b7b18d98-b513-400a-86aa-bc8fde41c413">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement x="0" y="0" width="108" height="30" uuid="f66896ec-f6c0-4940-b4f5-0f215765a821"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Rejected]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="108" height="30" uuid="e62c5456-7ba1-4192-804c-f1abfd075aa9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{rejectedCount}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement key="" style="Style1" x="260" y="120" width="220" height="30" uuid="a8146254-94cb-4317-b96f-2fdd16088bba"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="260" y="159" width="220" height="30" uuid="89fa918a-feff-4844-a1c5-fa2897ed0510">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subcategory}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

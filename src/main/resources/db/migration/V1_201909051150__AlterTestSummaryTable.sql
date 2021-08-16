@@ -1,0 +1,1 @@
+ALTER TABLE vexamine_test_summary ADD COLUMN report_sent boolean;

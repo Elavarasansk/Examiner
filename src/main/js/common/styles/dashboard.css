@@ -1,0 +1,83 @@
+.left-content {
+  position: relative;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: 'Times New Roman', Cursive;
+  color: #9cc700;
+  margin-bottom: 12px;
+}
+
+.top-title{
+  position: relative;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: 'Times New Roman', Cursive;
+  color: #9cc700;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.title{
+  position: relative;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: 'Hind', sans-serif;
+  font-weight: 700;
+  color: #154360;
+  margin-bottom: 19px;
+}
+
+.right-content{
+  font-weight: 500;
+  margin-bottom: 19px;
+  position: relative;
+  top: 14px;
+  line-height: 30px;
+}
+
+.text{
+  position: relative;
+  font-size: 15px;
+  font-family: 'Hind', sans-serif;
+  line-height: 22px;
+}
+
+.text{
+  position: relative;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Hind', sans-serif;
+  line-height: 30px;
+}
+
+.text{
+  position: relative;
+  margin-bottom: 46px;
+}
+
+.font_size_16{
+  font-size: 20px;
+}
+
+.centered{
+	text-align: center;
+}
+
+
+/* Login CSS settings */
+.login-form {
+  max-width: 300px;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
+
+.body_content {
+	background-image: url("./images/smooth.jpg");
+/* 	background-repeat: no-repeat; */
+	background-repeat: stretch;
+	background-size: 100%;
+}

@@ -1,0 +1,59 @@
+.trigger {
+	font-size: 18px;
+	line-height: 64px;
+	padding: 0 24px;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.trigger:hover {
+	color: #1890ff;
+}
+
+.logo {
+	height: 45px;
+	background-image: url("./images/logotrans.png");
+	background-repeat: no-repeat;
+	background-size: 173px;
+	margin: 16px;
+}
+
+
+.ant-layout {
+	height: 100%;
+}
+
+
+.container{
+    display: flex;
+}
+.fixed{
+    width: 50px;
+}
+.flex-item{
+    flex-grow: 1;
+}
+
+.single-info{
+  position: relative;
+  display: inline-block;
+}
+
+.icon-box{
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  height: 39px;
+  border-radius: 15px;
+  width: 39px;
+  line-height: 39px;
+  text-align: center;
+  background: #154360;
+}
+
+.single-info .text{
+  position: relative;
+  font-size: 15px;
+  font-family: 'Hind', sans-serif;
+  line-height: 22px;
+}

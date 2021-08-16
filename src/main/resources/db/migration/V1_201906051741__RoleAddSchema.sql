@@ -1,0 +1,3 @@
+INSERT INTO vexamine_role(type, description, create_user, update_user) VALUES ('CANDIDATE', 'Person Who can take up tests, within certain limits', 'SYSTEM', 'SYSTEM');
+INSERT INTO vexamine_role(type, description, create_user, update_user) VALUES ('MANAGER', 'Person Who can ASSIGN tests and manage candidates', 'SYSTEM', 'SYSTEM');
+INSERT INTO vexamine_role(type, description, create_user, update_user) VALUES ('SUPER_ADMIN', 'Person Who has control over total application', 'SYSTEM', 'SYSTEM');

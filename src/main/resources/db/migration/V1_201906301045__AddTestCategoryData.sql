@@ -1,0 +1,2 @@
+INSERT INTO public.vexamine_test_category (category, sub_category, create_user, update_user, create_date, update_date) VALUES ('PROGRAMMING', 'JAVA', 'vexamineAdmin', 'vexamineAdmin', '2019-06-30 21:56:20.856', '2019-06-30 21:56:20.856+05:30');
+INSERT INTO public.vexamine_test_category (category, sub_category, create_user, update_user, create_date, update_date) VALUES ('PROGRAMMING', 'JAVASCRIPT', 'vexamineAdmin', 'vexamineAdmin', '2019-06-30 21:56:58.6', '2019-06-30 21:56:58.6+05:30');

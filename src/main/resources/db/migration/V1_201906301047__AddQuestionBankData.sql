@@ -1,0 +1,2 @@
+INSERT INTO public.vexamine_question_bank (category_id, question_bank_name, create_user, update_user, create_date, update_date) VALUES (1, 'JAVA_QB', 'vexamineAdmin', 'vexamineAdmin', '2019-06-30 22:19:26.842', '2019-06-30 22:19:26.842+05:30');
+INSERT INTO public.vexamine_question_bank (category_id, question_bank_name, create_user, update_user, create_date, update_date) VALUES (2, 'JS_QB', 'vexamineAdmin', 'vexamineAdmin', '2019-06-30 22:32:26.423', '2019-06-30 22:32:26.423+05:30');

@@ -1,0 +1,1 @@
+ALTER TABLE vexamine_manager_info ALTER COLUMN question_bank_id DROP NOT NULL;
